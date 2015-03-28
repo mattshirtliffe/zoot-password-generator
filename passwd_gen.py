@@ -60,7 +60,23 @@ class Password():
 
         return key
 
+    # the password could be in the class
+    def remember_password(self,password):
+        remember = ""
+        for i,v in enumerate(password):
+
+            if v.upper() in self.phenetic_alpha.keys():
+                remember += self.phenetic_alpha[v.upper()] +" "
+            else:
+                remember +=v + " "
+
+        
+        return remember
+        
+
 if __name__ == "__main__":
-    p = Password(length=8,letters=True,mixedcase=True,numbers=False,punctuation=False)
-    print p.create_password()
-    print p.create_password(repeat=False)
+    p = Password(length=8,letters=True,mixedcase=True,numbers=True,punctuation=False)
+
+    password = p.create_password(repeat=False)
+    print password
+    print p.remember_password(password)
