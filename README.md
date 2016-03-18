@@ -1,4 +1,6 @@
 
+# Zoot Password Generator
+A simple webservice for generating random passwords
 
 # Build and Run
 `$ docker build -t zoot .`
