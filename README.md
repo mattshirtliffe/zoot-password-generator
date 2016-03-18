@@ -4,5 +4,5 @@
 `$ docker build -t zoot .`
 `$ docker run -d -p 80:80 zoot `
 
-# consume
+# Consume
 ` $ curl -X GET 'http://<your-ip> `
