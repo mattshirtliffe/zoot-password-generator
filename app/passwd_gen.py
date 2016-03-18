@@ -2,9 +2,6 @@ import string
 import random
 
 
-# TODO Remember with Phenetic alpha
-# TODO Create unittests
-# TODO write with pgp key
 
 class Password():
     
@@ -75,7 +72,7 @@ class Password():
         
 
 if __name__ == "__main__":
-    p = Password(length=8,letters=True,mixedcase=True,numbers=True,punctuation=False)
+    p = Password(length=8,letters=True,mixedcase=True,numbers=True,punctuation=True)
 
     password = p.create_password(repeat=False)
     print password
